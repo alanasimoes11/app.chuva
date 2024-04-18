@@ -2,23 +2,22 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
+	Resultado= new Results();
 	public MainPage()
 	{
 		InitializeComponent();
+		TestandoLayout();
 	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
+	void TestandoLayout()
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		Resultado.temp="23"
+		Resultado.city="Apucarana, PR"
 	}
+	
+
+
+
+
+	
 }
 
