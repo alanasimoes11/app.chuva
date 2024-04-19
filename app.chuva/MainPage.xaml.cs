@@ -2,7 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-	Resultado= new Results();
+	results Capa;
 	public MainPage()
 	{
 		InitializeComponent();
@@ -10,8 +10,8 @@ public partial class MainPage : ContentPage
 	}
 	void TestandoLayout()
 	{
-		Resultado.temp="23"
-		Resultado.city="Apucarana, PR"
+		 Capa.temp=23;
+		 Capa.city="Apucarana, PR";
 	}
 	
 

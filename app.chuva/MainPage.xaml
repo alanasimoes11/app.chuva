@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="app.chuva.MainPage">
 
-<Grid
-ColunmSpacing="3"
-RowSpacing="3"/>
+<Grid ColunmSpacing="3"
+       RowSpacing="3">
 
 <Grid.RowDefinitions>
     <RowDefinition Height ="*"/>
@@ -18,12 +17,12 @@ RowSpacing="3"/>
     <GridColunmDefinition Width ="*"/>
 </Grid.ColunmDefinitions>
 
-<Image Source="diachuva.jpg"
+<Image Source="dnublado.jpg"
        Grid.RowSpan="20"
        Grid.ColunmSpan="3"
        Aspect="AspectFill"/>
        
-<Frame x:Name="Tempo"
+<Frame x:Name="Clima"
        CornerRadius="20"
        Padding="0"
        Margin="5, 50, 5, 30"
@@ -66,7 +65,7 @@ RowSpacing="3"/>
 </Grid>
 </Frame>
 
-<Frame x:Name="Vento"
+<Frame x:Name="Chuva"
        CornerRadius="20"
        Padding="0"
        Margin="5, 50, 5, 5"
@@ -118,33 +117,94 @@ RowSpacing="3"/>
        Grid.Row="0"
        Grid.Column="1">
 
+<Grid>
+<Grid.RowDefinitions>
+    <RowDefinition Height ="*"/>
+    <RowDefinition Height ="*"/>
+    <RowDefinition Height ="*"/>
+</Grid.RowDefinitions>
+<Grid.ColunmDefinitions>
+    <GridColunmDefinition Width ="100"/>
+    <GridColunmDefinition Width ="*"/>
+</Grid.ColunmDefinitions>
 
+<Label Text="Sol"
+       Grid.Row="0"
+       Grid.Column="2"
+       FontSize="18"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
 
+<Label Text="Amanhecer"
+       Grid.Row="2"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
 
+<Label Text="Anoitecer"
+       Grid.Row="2"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</Grid>
 </Frame>
+
+<Frame x:Name="Vento"
+       CornerRadius="20"
+       Padding="0"
+       Margin="5, 50, 5, 5"
+       BorderColor="Black"
+       BackgroundColor="#55ffffff"
+       Grid.Row="0"
+       Grid.Column="2">
+<Grid>
+<Grid.RowDefinitions>
+    <RowDefinition Height ="*"/>
+    <RowDefinition Height ="*"/>
+    <RowDefinition Height ="*"/>
+</Grid.RowDefinitions>
+<Grid.ColunmDefinitions>
+    <GridColunmDefinition Width ="100"/>
+    <GridColunmDefinition Width ="*"/>
+</Grid.ColunmDefinitions>
+
+<Label Text="Vento"
+       Grid.Row="2"
+       Grid.Column="0"
+       FontSize="18"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
+
+<Label Text="Força"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
+
+<Label Text="Direção"
+       Grid.Row="2"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
+
+</Grid>
+</Frame>
+
+<Frame x:Name="segundaparte"
+       CornerRadius="20"
+       Padding="10"
+       Margin="5, 50, 5, 5"
+       BorderColor="Black"
+       BackgroundColor="#55ffffff"
+       Grid.Row="0"
+       Grid.Column="2">
+</Frame>
+
+
 </Grid>
 </ContentPage>
