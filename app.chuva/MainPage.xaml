@@ -1,35 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="app.chuva.MainPage">
 
-<Grid ColunmSpacing="3"
-       RowSpacing="3">
+<Grid>
 
 <Grid.RowDefinitions>
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
 </Grid.RowDefinitions>
-<Grid.ColunmDefinitions>
-    <GridColunmDefinition Width ="*"/>
-    <GridColunmDefinition Width ="*"/>
-    <GridColunmDefinition Width ="*"/>
-</Grid.ColunmDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width ="*"/>
+    <ColumnDefinition Width ="*"/>
+    <ColumnDefinition Width ="*"/>
+</Grid.ColumnDefinitions>
 
-<Image Source="dnublado.jpg"
-       Grid.RowSpan="20"
-       Grid.ColunmSpan="3"
+<Image x:Name="imgFundo"
+       Grid.RowSpan="3"
+       Grid.ColumnSpan="3"
        Aspect="AspectFill"/>
        
-<Frame x:Name="Clima"
-       CornerRadius="20"
+<Frame CornerRadius="20"
        Padding="0"
        Margin="5, 50, 5, 30"
        BackgroundColor="#55ffffff"
-       GridRow="0"
+       Grid.Row="0"
        Grid.RowSpan="3"
-       Grid.Colunm="0">
+       Grid.Column="0">
 
 <Grid>
 <Grid.RowDefinitions>
@@ -37,25 +35,25 @@
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
 </Grid.RowDefinitions>
-<Grid.ColunmDefinitions>
-    <GridColunmDefinition Width ="100"/>
-</Grid.ColunmDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width ="*"/>
+</Grid.ColumnDefinitions>
 
-<Label Text="23"
+<Label x:Name="Labeltemp"
        Grid.Row="0"
        Grid.Column="0"
        FontSize="60"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
        
-<Label Text="Dnublado"
+<Label x:Name="Labeldescription"
        Grid.Row="1"
        Grid.Column="0"
        FontSize="15"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
-<Label Text="Apucarana-PR"
+<Label x:Name="Labelcity"
        Grid.Row="2"
        Grid.Column="0"
        FontSize="15"
@@ -65,8 +63,7 @@
 </Grid>
 </Frame>
 
-<Frame x:Name="Chuva"
-       CornerRadius="20"
+<Frame CornerRadius="20"
        Padding="0"
        Margin="5, 50, 5, 5"
        BorderColor="Black"
@@ -80,18 +77,19 @@
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
 </Grid.RowDefinitions>
-<Grid.ColunmDefinitions>
-    <GridColunmDefinition Width ="100"/>
-</Grid.ColunmDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width ="100"/>
+    <ColumnDefinition Width ="100"/>
+</Grid.ColumnDefinitions>
 
-<Label Text="Nuvem"
-       Grid.Row="0"
-       Grid.ColumnSpan="2"
-       FontSize="18"
+<Label Text="Chuva"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
        
-<Label Text="Chuva"
+<Label x:Name="Labelrain"
        Grid.Row="1"
        Grid.Column="0"
        FontSize="15"
@@ -105,11 +103,17 @@
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
+<Label x:Name="Labelhumidity"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>
+
 </Grid>
 </Frame>
 
-<Frame x:Name="Sol"
-       CornerRadius="20"
+<Frame  CornerRadius="20"
        Padding="0"
        Margin="5, 50, 5, 5"
        BorderColor="Black"
@@ -123,10 +127,10 @@
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
 </Grid.RowDefinitions>
-<Grid.ColunmDefinitions>
-    <GridColunmDefinition Width ="100"/>
-    <GridColunmDefinition Width ="*"/>
-</Grid.ColunmDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width ="100"/>
+    <ColumnDefinition Width ="*"/>
+</Grid.ColumnDefinitions>
 
 <Label Text="Sol"
        Grid.Row="0"
@@ -142,12 +146,26 @@
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
+<Label x:Name="Labelsunrise"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>      
+
 <Label Text="Anoitecer"
        Grid.Row="2"
        Grid.Column="0"
        FontSize="15"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
+
+<Label x:Name="Labelsunset"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/>      
 
 </Grid>
 </Frame>
@@ -166,10 +184,10 @@
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
 </Grid.RowDefinitions>
-<Grid.ColunmDefinitions>
-    <GridColunmDefinition Width ="100"/>
-    <GridColunmDefinition Width ="*"/>
-</Grid.ColunmDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width ="100"/>
+    <ColumnDefinition Width ="*"/>
+</Grid.ColumnDefinitions>
 
 <Label Text="Vento"
        Grid.Row="2"
@@ -185,12 +203,26 @@
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
+<Label x:Name="Labelwind_speedy"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/> 
+
 <Label Text="Direção"
        Grid.Row="2"
        Grid.Column="0"
        FontSize="15"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
+
+<Label x:Name="Labelwind_direction"
+       Grid.Row="1"
+       Grid.Column="0"
+       FontSize="15"
+       TextColor="Black"
+       HorizontalTextAlignment="Center"/> 
 
 </Grid>
 </Frame>
