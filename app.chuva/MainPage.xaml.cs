@@ -40,28 +40,28 @@ async void AtualizaTempo()
   void PreencherTela()
   {
 	Labeltemp.Text = resposta.results.temp.ToString();
-    Labeldescription.Text = resposta.results.description.ToString();
-	Labelcity.Text = resposta.results.city.ToString();
+    Labeldescription.Text = resposta.results.description;
+	Labelcity.Text = resposta.results.city;
 	Labelrain.Text = resposta.results.rain.ToString();
 	Labelhumidity.Text =resposta.results.humidity.ToString();
-	Labelsunrise.Text =resposta.results.sunrise.ToString();
-    Labelsunset.Text =resposta.results.sunset.ToString();
-	Labelwind_speedy.Text =resposta.results.wind_speedy.ToString();
+	Labelsunrise.Text =resposta.results.sunrise;
+    Labelsunset.Text =resposta.results.sunset;
+	Labelwind_speedy.Text =resposta.results.wind_speedy;
 	Labelwind_direction.Text =resposta.results.wind_direction.ToString();
-	//Labelmoon_phase .Text =resposta.results.moon_phase.ToString();
-	//Labelcurrently .Text =resposta.results.currently .ToString();
+	Labelmoon_phase.Text =resposta.results.moon_phase;
+	//Labelcurrently .Text =resposta.results.currently;
 	//Labelcodition_code .Text =resposta.results.codition_code.ToString();
    // Labelimg_id.Text =resposta.results.img_id.ToString();
-    //Labelcloudiness.Text =resposta.results.cloudiness.ToString();
+   //Labelcloudiness.Text =resposta.results.cloudiness.ToString();
     //Labelwind_cardinal.Text =resposta.results.wind_cardinal.ToString();
-	//if(resposta.results.moon_phase=="full")
-			//labeldafasedalua.Text = "Cheia";
-		//else if(resposta.results.moon_phase=="new")
-		//	labeldafasedalua.Text = "Nova";
-		//else if(resposta.results.moon_phase=="growing")
-			//labeldafasedalua.Text = "Crescente";
-		//else if(resposta.results.moon_phase=="waning")
-			//labeldafasedalua.Text = "minguante";
+	if(resposta.results.moon_phase=="full")
+		 Labelmoon_phase.Text = "Cheia";
+		else if(resposta.results.moon_phase=="new")
+		 Labelmoon_phase.Text = "Nova";
+		else if(resposta.results.moon_phase=="growing")
+			Labelmoon_phase.Text = "Crescente";
+		else if(resposta.results.moon_phase=="waning")
+			Labelmoon_phase.Text = "minguante";
 
 
 		if(resposta.results.currently=="dia")
@@ -71,7 +71,7 @@ async void AtualizaTempo()
 			else if(resposta.results.cloudiness>=10)
 			imgFundo.Source="dianublado.png";
 			else
-			imgFundo.Source="diaensolarado";
+			imgFundo.Source="diaensolarado.png";
 		}
 		else
 		{
