@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="app.chuva.MainPage">
+             x:Class="app.chuva.MainPage"
+             Shell.NavBarIsVisible="false">
 
 <Grid>
 
@@ -21,16 +22,19 @@
        Grid.ColumnSpan="3"
        Aspect="AspectFill"/>
        
-<Frame CornerRadius="20"
+<Frame CornerRadius="30"
        Padding="0"
-       Margin="5, 50, 5, 30"
+       Margin="5, 50, 5, 240"
        BackgroundColor="#55ffffff"
        Grid.Row="0"
+       BorderColor="Black"
        Grid.RowSpan="3"
        Grid.Column="0">
 
 <Grid>
 <Grid.RowDefinitions>
+    <RowDefinition Height ="*"/>
+    <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
     <RowDefinition Height ="*"/>
@@ -42,24 +46,26 @@
 <Label x:Name="Labeltemp"
        Grid.Row="0"
        Grid.Column="0"
-       FontSize="60"
+       VerticalOptions="End"
+       FontSize="24"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
        
 <Label x:Name="Labeldescription"
-       Grid.Row="1"
+       Grid.Row="5"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelcity"
        Grid.Row="2"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
+       VerticalOptions="Center"
        TextColor="Black"
-       HorizontalTextAlignment="Center"/>
-
+       HorizontalTextAlignment="Center"/>           
+                                                      
 </Grid>
 </Frame>
 
@@ -85,28 +91,28 @@
 <Label Text="Chuva:"
        Grid.Row="1"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
        
 <Label x:Name="Labelrain"
        Grid.Row="1"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label Text="Umidade:"
        Grid.Row="2"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelhumidity"
        Grid.Row="2"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="1"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
@@ -142,28 +148,28 @@
 <Label Text="Amanhecer:"
        Grid.Row="1"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelsunrise"
        Grid.Row="1"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>      
 
 <Label Text="Anoitecer:"
        Grid.Row="2"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelsunset"
        Grid.Row="2"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>      
 
@@ -199,28 +205,28 @@
 <Label Text="Força:"
        Grid.Row="1"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelwind_speedy"
        Grid.Row="1"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/> 
 
 <Label Text="Direção:"
        Grid.Row="2"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelwind_direction"
        Grid.Row="2"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/> 
 
@@ -255,14 +261,14 @@
 <Label Text="Fase da Lua:"
        Grid.Row="1"
        Grid.Column="0"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
 
 <Label x:Name="Labelmoon_phase"
        Grid.Row="1"
        Grid.Column="1"
-       FontSize="15"
+       FontSize="12"
        TextColor="Black"
        HorizontalTextAlignment="Center"/> 
 
@@ -272,13 +278,22 @@
 <Frame x:Name="segundaparte"
        CornerRadius="20"
        Padding="10"
-       Margin="5, 50, 5, 5"
+       Margin="10, 50, 10, 5"
        BorderColor="Black"
        BackgroundColor="#55ffffff"
-       Grid.Row="0"
-       Grid.Column="2">
+       Grid.Row="10"
+       Grid.ColumnSpan="3">
+
+<Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+
+</Grid>
 </Frame>
-
-
 </Grid>
 </ContentPage>

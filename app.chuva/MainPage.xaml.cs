@@ -30,7 +30,7 @@ async void AtualizaTempo()
 
 			PreencherTela();
 		}
-		catch (Exception e)	
+		catch (Exception)	
 		{
 			//erro
 		}
@@ -67,20 +67,20 @@ async void AtualizaTempo()
 		if(resposta.results.currently=="dia")
 		{
 			if(resposta.results.rain>=10)
-			imgFundo.Source="diachuvoso.png";
+			imgFundo.Source="diachuva.jpg";
 			else if(resposta.results.cloudiness>=10)
-			imgFundo.Source="dianublado.png";
+			imgFundo.Source="dianublado.jpg";
 			else
-			imgFundo.Source="diaensolarado.png";
+			imgFundo.Source="diasol.jpg";
 		}
 		else
 		{
 			if(resposta.results.rain>=10)
-			 imgFundo.Source="noitechuvosa.png";
+			 imgFundo.Source="noitechuvosa.jpg";
 			 else if (resposta.results.cloudiness>=10)
-			 imgFundo.Source="noitenublada.png";
+			 imgFundo.Source="noitenublada.jpg";
 			 else
-			 imgFundo.Source="noiteestrelada.png";
+			 imgFundo.Source="noiteestrelada.jpg";
 		}
 	
 }
