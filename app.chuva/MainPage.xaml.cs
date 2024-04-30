@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Reflection.Emit;
+using System.Text.Json;
 
 namespace app.chuva;
 
@@ -49,6 +50,22 @@ async void AtualizaTempo()
 	Labelwind_speedy.Text =resposta.results.wind_speedy;
 	Labelwind_direction.Text =resposta.results.wind_direction.ToString();
 	Labelmoon_phase.Text =resposta.results.moon_phase;
+	if (resposta.results.moon_phase=="full")
+	    Labelmoon_phase.Text = "Cheia";
+	else if (resposta.results.moon_phase== "new")
+	    Labelmoon_phase.Text = "Nova";
+	else if  (resposta.results.moon_phase==" waxing_crescent")
+	    Labelmoon_phase.Text = "Crescente";
+	else if (resposta.results.moon_phase== "waxing_gibbous")
+	    Labelmoon_phase.Text = "Gibosa Crescente";
+	else if (resposta.results.moon_phase== "first_quarter")
+	    Labelmoon_phase.Text = "Quarto Crescente";
+	else if (resposta.results.moon_phase== "waning_crescent")
+	    Labelmoon_phase.Text = "Minguante";
+	else if (resposta.results.moon_phase== "waning_gibbous")
+	    Labelmoon_phase.Text = "Gibosa Minguante";
+    else 
+	    Labelmoon_phase.Text = "Quarto Minguante";
 	//Labelcurrently .Text =resposta.results.currently;
 	//Labelcodition_code .Text =resposta.results.codition_code.ToString();
    // Labelimg_id.Text =resposta.results.img_id.ToString();

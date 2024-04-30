@@ -47,7 +47,7 @@
        Grid.Row="0"
        Grid.Column="0"
        VerticalOptions="End"
-       FontSize="24"
+       FontSize="50"
        TextColor="Black"
        HorizontalTextAlignment="Center"/>
        
